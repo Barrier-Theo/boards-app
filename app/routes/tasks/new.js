@@ -6,12 +6,12 @@ export default Route.extend({
   },
   actions:{
     save:function(oldValue,newValue){
-      let developer=this.get('store').createRecord('tag',JSON.parse(JSON.stringify(newValue)));
-      developer.save().then(()=>{this.transitionTo("tag");}).
+      let task=this.get('store').createRecord('task',JSON.parse(JSON.stringify(newValue)));
+      task.save().then(()=>{this.transitionTo("tasks");}).
       catch((error)=>console.log(error));
     },
     cancel(){
-      this.transitionTo("tag");
+      this.transitionTo("tasks");
     }
   }
 });

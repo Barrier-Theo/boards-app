@@ -13,10 +13,10 @@ export default Route.extend({
   },
   actions:{
     save(dev,data){
-     Ember.set(dev,'identity',data.identity);
-     dev.save().then(()=>{
-       this.transitionTo("developers");
-     })
+      Ember.set(dev,'identity',data.identity);
+      dev.save().then(()=>{
+        this.transitionTo("developers");
+    })
     },
     cancel(){
       this.transitionTo("developers");

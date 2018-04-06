@@ -1,3 +1,33 @@
 <div class="ui segment">Index</div>
+<div class="ui grid">
+  {{#each model.models as |tables index| }}
+    <div class="eight wide column">
+      <div class="item">
+        <div class="ui message icon">
+          <i class="icons big">
+            <i class="icon {{get model.icons index}}"></i>
+          </i>
+          <div class="content">
+            {{pluriels number=tables.objects.length}}
+            <div class="header">
+              {{tables.name}}
+            </div>
+          </div>
+          <div class="extra">
+            <span class="see">
+              <a href="{{pluralize tables.name}}" class="ui button">See all</a>
+            </span>
+            <span class="new">
+              <a href="{{pluralize tables.name}}/new" class="ui button">Add new</a>
+            </span>
+          </div>
+        </div>
+
+        <hr/>
+      </div>
+    </div>
+  {{/each}}
+
+</div>
 
 {{outlet}}
