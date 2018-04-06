@@ -1,7 +1,14 @@
 # boards-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Dans ce projet, on peut naviguer entre les différentes pages grâce à la page index. 
+Pour tous les models, project, developpers, tags, tasks, Steps, les fonctionnalités CRUD sont présentes :
+
+Listage des instances dans une table
+Suppression
+Modification
+Ajout
+
+Pour le model, tags, seul la couleur n'est pas prise en compte. 
 
 ## Prerequisites
 
